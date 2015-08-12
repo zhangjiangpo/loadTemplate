@@ -14,7 +14,10 @@
             nameId:'',
             zIndex:'',
             loadAnimate:'right',//left、top、bottom、right
-            removeAnimate:'right'
+            removeAnimate:'right',
+            loadComplete: function () {
+                
+            }//加载页面完毕
         };
         this.setting= $.extend({},detaultData,opt);
         this.init();
@@ -26,6 +29,7 @@
             this.loadTem(this.setting.url, function (res) {
                 addStr+=res+'</section>';
                 $(doc.body).append(addStr);
+                _this.setting.loadComplete();
                 var inter=setInterval(function () {
                     if($('#'+_this.setting.nameId).length){
                         clearInterval(inter);

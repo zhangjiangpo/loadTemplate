@@ -4,7 +4,52 @@
 $(function () {
     $.pageArr={
         index:null,
-        list:null
+        list:null,
+        listData:[{
+            id:'1',
+            name:'zhang'
+        },{
+            id:'2',
+            name:'li'
+        },{
+            id:'3',
+            name:'wang'
+        },{
+            id:'4',
+            name:'zhao'
+        },{
+            id:'5',
+            name:'guan'
+        },{
+            id:'2',
+            name:'li'
+        },{
+            id:'3',
+            name:'wang'
+        },{
+            id:'4',
+            name:'zhao'
+        },{
+            id:'5',
+            name:'guan'
+        },{
+            id:'2',
+            name:'li'
+        },{
+            id:'3',
+            name:'wang'
+        },{
+            id:'4',
+            name:'zhao'
+        },{
+            id:'5',
+            name:'guan'
+        }],
+        detail:null,
+        detailData:{
+            id:'',
+            name:''
+        }
     }
     $('#loadList').on('click',function(){
         $.pageArr.list=$.loadTemplate({
