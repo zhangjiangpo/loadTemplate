@@ -1,0 +1,31 @@
+.page-container{
+    position: absolute;
+    left:0;
+    height:0;
+    width:100%;
+    height:100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 2;
+    background-color: #efeff4;
+}
+.page-load-right{
+    animation:pageLoadRight 0.5s ease-in-out forwards;
+    -webkit-animation:pageLoadRight 0.5s ease-in-out forwards;
+}
+@keyframes pageLoadRight {
+    from{transform:translateX(100%);}
+}
+@-webkit-keyframes pageLoadRight {
+    from{-webkit-transform:translateX(-100%);}
+}
+.page-remove-right{
+    animation:pageRemoveRight 0.5s ease-in-out forwards;
+    -webkit-animation:pageRemoveRight 0.5s ease-in-out forwards;
+}
+@keyframes pageRemoveRight {
+    to{transform:translateX(100%);}
+}
+@-webkit-keyframes pageRemoveRight {
+    to{-webkit-transform:translateX(-100%);}
+}
